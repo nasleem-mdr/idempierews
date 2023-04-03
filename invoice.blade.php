@@ -141,20 +141,47 @@
                         
                             <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">                       
                                 @foreach($responseBody['WindowTabData']['DataSet']['DataRow'] as $link=>$value )
-                                Invoice No : {{$value[0]['val']}} {{$value[2]['val']}} 
+                                <table>
+                                    <tr>
+                                        <th>Document No</th>
+                                        <td>:</td>
+                                        <td>{{$value[0]['val']}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Invoice Amount</th>
+                                        <td>:</td>
+                                        <td>{{$value[2]['val']}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <td>:</td>
+                                        <td>{{$value[3]['val']}}</td>
+                                    </tr>
+                                    </table>
+                                         
+                                
                                 @endforeach
-
-                                @foreach($responseBody2['WindowTabData']['DataSet']['DataRow'] as $link=>$value )
-                                Customer : {{$value[1]['val']}} 
-                                @endforeach                              
+                         
                             </div>
                             <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                                @foreach($responseBody['WindowTabData']['DataSet']['DataRow'] as $link=>$value )
-                                Invoice No : {{$value[0]['val']}} {{$value[2]['val']}} 
-                                @endforeach
-
                                 @foreach($responseBody2['WindowTabData']['DataSet']['DataRow'] as $link=>$value )
-                                Customer : {{$value[1]['val']}} 
+                                <table>
+                                    <tr>
+                                        <th>Customer</th>
+                                        <td>:</td>
+                                        <td>{{$value[1]['val']}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Address </th>
+                                        <td>:</td>
+                                        <td>{{$value[1]['val']}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <td>:</td>
+                                        <td>{{$value[1]['val']}}</td>
+                                    </tr>
+                                    </table>
                                 @endforeach 
                             </div>                        
                         
